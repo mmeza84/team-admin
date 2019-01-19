@@ -1,0 +1,33 @@
+{
+  "name": "team-admin-ui",
+  "version": "0.0.1",
+  "description": "UI for team management project.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "start": "webpack-dev-server --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmeza84/team-admin.git"
+  },
+  "author": "Matt Meza (mmeza84@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmeza84/team-admin/issues"
+  },
+  "homepage": "https://github.com/mmeza84/team-admin#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
