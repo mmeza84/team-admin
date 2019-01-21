@@ -16,7 +16,7 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div class="home-wrapper">
+			<div className="home-wrapper">
 				<SiteTitle
 					{...this.state}
 				/>

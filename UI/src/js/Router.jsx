@@ -15,7 +15,7 @@ const AppRouter = () => (
 					<li><NavLink exact to="/teams">Teams</NavLink></li>
 				</ul>
 			</nav>
-			<div class="main-content">
+			<div className="main-content">
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route path="/teams" component={Teams} />
