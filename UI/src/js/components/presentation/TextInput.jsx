@@ -5,7 +5,7 @@ import React from "react";
 const TextInput = ({ className, defaultValue, onChangeCallback, onBlurCallback }) => (
 	<input
 		type="text"
-		className={className}
+		className={`text-input ${className}`}
 		onChange={onChangeCallback}
 		onBlur={onBlurCallback}
 	/>

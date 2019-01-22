@@ -4,7 +4,8 @@ module.exports = {
 	entry: "./src/js/index.js",
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "./app.js"
+		publicPath: "/",
+		filename: "app.js"
 	},
 	module: {
 		rules: [
@@ -25,6 +26,9 @@ module.exports = {
 		contentBase: [
 			path.resolve(__dirname, "dist")
 		],
-		historyApiFallback: true
+		historyApiFallback: {
+			verbose: true,
+			logger: console.log.bind(console)
+		}
 	}
 };
