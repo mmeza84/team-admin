@@ -2,30 +2,46 @@
 
 import React, { Component } from "react";
 
+import Person from "../presentation/Person";
 import SiteTitle from "../presentation/SiteTitle";
 import TextInput from "../presentation/TextInput";
+
+import People from "../../sampleData/people.js";
 
 class Team extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			pageTitle: "Team"
+			pageTitle: "Sao Paulo FC"
 		};
+	}
+
+	componentDidMount() {
+		// load sample player data
+		this.setState({
+			people: People
+		});
 	}
 
 	render() {
 		console.log("this.props", this.props);
+		console.log("this.state", this.state);
+
 		return (
 			<div>
 				<SiteTitle
 					{...this.state}
 				/>
-				<TextInput 
-					className="sample-class"
-					onChangeCallback={(event) => { console.log("On change."); }}
-					onBlurCallback={(event) => { console.log("On blur."); }}
-				/>
+				{this.state.people && 
+					this.state.people.map(eachPerson => {
+						return (
+							<Person 
+								{...eachPerson}
+							/>
+						)
+					})
+				}
 			</div>
 		);
 	}

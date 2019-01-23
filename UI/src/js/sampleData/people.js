@@ -1,4 +1,4 @@
-export default {
+export default [
 	{
 		"name": "John Player",
 		"email": "john.player@gmail.com",
@@ -13,4 +13,4 @@ export default {
 		"name": "Sally Player",
 		"isPlayer": true
 	}
-};
+];

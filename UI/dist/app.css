@@ -70,3 +70,38 @@ nav a:hover {
     border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 0.2em;
 }
+
+.team-person {
+	background-color: #efefef;
+	padding: 0.75em;
+	margin: 0.5em 0;
+	border-radius: 0.25em;
+
+	color: #db4f6f;
+}
+
+.team-person span.team-person-title {
+	color: #000;
+}
+
+.team-person > div:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+.team-search-result {
+	background-color: #efefef;
+	padding: 0.75em;
+	margin: 0.5em 0;
+	border-radius: 0.25em;
+}
+
+.team-search-result a,
+.team-person a {
+	color: #db4f6f;
+	text-decoration: none;
+}
+
+.team-search-result a:hover,
+.team-person a:hover {
+	text-decoration: underline;
+}

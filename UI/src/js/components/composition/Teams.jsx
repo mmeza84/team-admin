@@ -6,7 +6,10 @@ import { Link, Switch, Route } from "react-router-dom";
 import Team from "../composition/Team";
 
 import SiteTitle from "../presentation/SiteTitle";
+import TeamSearchResult from "../presentation/TeamSearchResult";
 import TextInput from "../presentation/TextInput";
+
+import TeamData from "../../sampleData/teams";
 
 class Teams extends Component {
 	constructor() {
@@ -17,6 +20,12 @@ class Teams extends Component {
 		};
 	}
 
+	componentDidMount() {
+		this.setState({
+			teams: TeamData
+		});
+	}
+
 	render() {
 		var { match } = this.props;
 		return (
@@ -24,12 +33,13 @@ class Teams extends Component {
 				<SiteTitle
 					{...this.state}
 				/>
-				<p>Team switch</p>
-				<Link to="teams/newTeamName">New Team</Link>
-				<Switch>
-					<Route exact path="/a" render={() => <div>Testing</div>} />
-					<Route path={`${match.path}/:teamName`} component={Team} />
-				</Switch>
+				{this.state.teams &&
+					this.state.teams.map(eachTeam => {
+						return (
+							<TeamSearchResult {...eachTeam} />
+						)
+					})
+				}
 			</div>
 		);
 	}
